@@ -1,0 +1,329 @@
+.background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: auto;
+    width: 100%;
+    background: repeating-conic-gradient(
+        rgb(237,237,237) 0deg,
+        rgb(237,237,237) 10deg,
+        rgb(245,245,245) 10deg,
+        rgb(245,245,245) 20deg
+    );
+    z-index: -99;
+}
+
+/* ======================================NAVBAR====================================== */
+.body{
+    z-index: 0;
+}
+.NavBar {
+    display: flex;
+    padding: 10px 20px;
+    background-color: #333;
+    margin: 1rem 15rem;
+    color: #fff;
+    top: 0;
+    justify-content: space-between;
+}
+.Brand {
+    font-size: 24px;
+    font-weight: bold;
+    text-decoration: none;
+    color: #fff;
+}
+.Nav-link {
+    display: flex;
+    gap: 5rem;
+}
+.Nav-link a {
+    color: #fff;
+    font-weight: 600;
+    display: flex;
+    gap: 5px;
+    text-decoration: none;
+    padding: 5px 10px;
+    transition: background-color 0.3s ease;
+}
+.Nav-link a:hover {
+    background-color: #555;
+    border-radius: 5px;
+}
+/* ======================================Category====================================== */
+
+.category {
+    display: grid;
+    grid-template-columns: repeat(10, 1fr);
+    gap: 5px;
+    margin: 1rem 15rem;
+    height: 8rem;
+    border: 2px solid goldenrod;
+    overflow: hidden;
+}
+
+.cat-img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+/* ======================================DESK====================================== */
+.mob{
+    display: none;
+}
+.desk{
+    border: 2px solid green;
+    margin: 1rem 15rem;
+    height: 20rem;
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+}
+.desk-img{
+    border: 2px solid blue;
+    width: 99%;
+    height: 20rem;
+}
+.desk-content{
+    display: grid;
+    grid-template-rows: repeat(3,1fr);
+}
+.desk-content h1{
+    display: flex;
+    justify-content: center;
+}
+
+/* ======================================CARD====================================== */
+.hold{
+    margin: 1rem 15rem;
+}
+.food-items{
+    border: 2px solid royalblue;
+    height: 33rem;
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    grid-template-rows: 1fr 1fr;
+    gap: 10px;
+}
+.cardr{
+    border: 2px solid palevioletred;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.kit{
+    margin: 0;
+}
+.cardr img{
+    width: 90%;
+}
+.options{
+    margin: 10px 0;
+    display: flex;
+    border : 2px solid green;
+    padding: 10px;
+    gap: 10px;
+}
+.opt-btn{
+    padding: 6px;
+    height: 2rem;
+    width: 10%;
+    background-color: #333;
+    color: #fff;
+}
+
+.choice{
+    display: none;
+}
+
+.desk2 {
+    border: 2px solid green;
+    margin: 1rem 15rem;
+    height: 20rem;
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+}
+
+.footer{
+    border: 2px solid green;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #333;
+    margin: 1rem 15rem;
+    gap: 5rem;
+}
+
+.bottom{
+    display: none;
+}
+.search{
+    display: none;
+}
+.cus-img{
+    height: 5rem;
+    width: 5rem;
+    margin: auto;
+    border-radius: 50%;
+    background-size: cover;
+}
+
+.c-img{
+    background-size: 100% 100%; 
+    border: 2px solid yellowgreen;
+    height: 80%;
+    width: 100%;
+    background-size: cover;
+    background-position: center;
+}
+.bttn{
+    width: 30%;
+    margin-bottom: 5px;
+}
+.social-icons a{
+    color: #fff;
+}
+/* ======================================MEDIA QUARY====================================== */
+
+@media (max-width: 600px) {
+    .NavBar{
+        margin: 0;
+    }
+    .dot{
+        width: 8px;
+        height: 8px;
+    }
+    .Nav-link {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        background-color: #333;
+        position: absolute;
+        top: 48px; /* Adjust this value based on the navbar height */
+        left: 0;
+        text-align: center;
+    }
+    .Nav-link.active {
+        display: flex;
+    }
+    .category{
+        grid-template-columns: repeat(5,1fr);
+        margin: 1rem 0;
+        height: auto;
+        width: 100%;
+    }
+    .desk{
+        display: none;
+    }
+    .mob{
+        display: block;
+    }
+.mySlides {
+    display: none;
+    width: 100%;
+  }
+  
+  .slideshow-container {
+    max-width: 40rem;
+    position: relative;
+    margin: auto;
+  }
+  
+  .prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    margin-top: -22px;
+    padding: 16px;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+  }
+  
+  .next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+  }
+  
+  .prev:hover, .next:hover {
+    background-color: rgba(0,0,0,0.8);
+  }
+  
+  .dot-container {
+    text-align: center;
+    padding: 10px;
+    background: white;
+  }
+  
+  .dot {
+    cursor: pointer;
+    height: 15px;
+    width: 15px;
+    margin: 0 2px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+  }
+  
+  .active, .dot:hover {
+    background-color: #717171;
+  }
+
+  .hold{
+    display: none;
+  }
+
+
+  .choice{
+    display: flex;
+    flex-direction: column;
+    border: 2px solid goldenrod;
+    height: 25rem;
+}
+.fotype{
+    display: grid;
+    width: 100%;
+    grid-template-columns: repeat(2,1fr);
+    grid-template-rows: 3rem 22rem;
+}
+
+.desk2{
+    display: none;
+}
+.footer{
+    margin: 0;
+    background-color: #555;
+}
+
+
+.bottom{
+    display: flex;
+    padding: 10px 20px;
+    background-color: #333;
+    color: #fff;
+    bottom: 0;
+    z-index: 1;
+    position: sticky;
+    justify-content: space-between;
+}
+.bottom a{
+    color: white;
+}
+.search{
+    display: block;
+}
+.card{
+    display: flex;
+    background-color: #fff;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid blue;
+}
+}
